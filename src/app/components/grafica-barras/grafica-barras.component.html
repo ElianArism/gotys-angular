@@ -1,0 +1,21 @@
+<div class="row">
+  <app-spinner *ngIf="results.length <= 0"></app-spinner>
+</div>
+
+<div class="chart-container" *ngIf="results.length > 0">
+    <ngx-charts-bar-horizontal
+      [scheme]="colorScheme"
+      [results]="results"
+      [gradient]="gradient"
+      [xAxis]="showXAxis"
+      [yAxis]="showYAxis"
+      [legend]="showLegend"
+      [showXAxisLabel]="showXAxisLabel"
+      [showYAxisLabel]="showYAxisLabel"
+      [xAxisLabel]="xAxisLabel"
+      [yAxisLabel]="yAxisLabel"
+      (select)="onSelect($event)"
+      style="fill: grey"
+      >
+    </ngx-charts-bar-horizontal>
+</div>

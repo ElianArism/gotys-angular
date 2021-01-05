@@ -1,0 +1,14 @@
+li {
+    list-style: none;
+}
+
+.votes {
+    display: block;
+    margin: 3px 0;
+    width: 50%;
+    background-color: #1c1c1c;
+    color: white;
+    border-radius: 3px;
+    padding: 4px;
+
+}

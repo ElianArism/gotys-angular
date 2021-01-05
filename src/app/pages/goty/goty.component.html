@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="col">
+        <div class="text-center mt-5">
+            <h1>Game Of The Year</h1>
+            <hr>
+        </div>
+
+        <ul class="d-flex flex-wrap align-content-center">
+            <li class="mx-auto my-2" *ngFor="let g of listOfGotys">
+                <div class="col-md-12">
+                    <div class="card">
+                        <img [src]="g.img" class="card-img-top text-center" style="width:250px; height: 250px; display: block; margin: auto;">
+                        
+                        <div class="card-body">
+                            <h5 class="card-title" style="color: #1c1c1c;">{{g.name}} <span class="votes">Votes: {{g.votes}}</span></h5>
+                            <button type="button" class="btn btn-dark" (click)="vote(g)">Vote this game</button>
+                        </div>
+                        
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+</div>
