@@ -19,7 +19,6 @@ export class GotyComponent {
   async getGotys() {
     await this._firebaseService.getGotys()
     .subscribe((res: any) => {
-      console.log(res);
       this.listOfGotys = [];
       for(let i = 0; i < res.length; i++) {
         if(res[i].payload.doc.data()) {
@@ -30,7 +29,6 @@ export class GotyComponent {
   }
 
   async vote(goty: Goty) {
-    console.log(goty)
     goty.votes += 1; 
     await this._firebaseService.vote(goty).then(data => console.log(data))
     
